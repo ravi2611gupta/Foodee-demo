@@ -1,5 +1,6 @@
+import HomeHeader from "./HomeHeader";
 import FocusedStatusBar from "./FocusedStatusBar";
 
-export{
-    FocusedStatusBar
+export {
+    HomeHeader, FocusedStatusBar
 }
