@@ -12,7 +12,7 @@ const FeedCard = ({ data }) => {
             backgroundColor: COLORS.white,
             borderRadius: SIZES.font,
             marginBottom: SIZES.extraLarge,
-            margin: SIZES.medium,
+            margin: SIZES.font,
         }}>
             {/* user details */}
             <View
@@ -50,7 +50,7 @@ const FeedCard = ({ data }) => {
             {/* feed image */}
             <View
                 style={{
-                    marginVertical: SIZES.medium,
+                    marginVertical: SIZES.font,
                     position: 'relative',
                 }}
             >
@@ -121,11 +121,11 @@ const FeedCard = ({ data }) => {
                     <Star />
                     <Star on={false} />
                 </View>
-                <Text style={{ fontFamily: FONTS.InterSemiBold, fontSize: SIZES.medium }}>{data.dishRating}</Text>
-                <Text style={{ fontSize: SIZES.medium, color: COLORS.secondary }}>({data.reviewCount} Reviews)</Text>
+                <Text style={{ fontFamily: FONTS.InterSemiBold, fontSize: SIZES.font }}>{data.dishRating}</Text>
+                <Text style={{ fontSize: SIZES.font, color: COLORS.secondary }}>({data.reviewCount} Reviews)</Text>
             </View>
             {/* description */}
-            <Text style={{ fontFamily: FONTS.regular, fontSize: SIZES.medium, color: COLORS.secondary, marginTop: 5, }}>{data.dishDescription}</Text>
+            <Text style={{ fontFamily: FONTS.regular, fontSize: SIZES.font, color: COLORS.secondary, marginTop: 5, }}>{data.dishDescription}</Text>
             {/* tags */}
             <View
                 style={{
