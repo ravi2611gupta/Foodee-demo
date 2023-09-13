@@ -37,4 +37,97 @@ const dishData = [
   }
 ];
 
-export { dishData };
+const dishes = [
+  {
+    id: "001",
+    image: assets.food01,
+    rating: 4.5,
+  },
+  {
+    id: "002",
+    image: assets.food02,
+    rating: 4.2,
+  },
+  {
+    id: "003",
+    image: assets.food03,
+    rating: 4.6,
+  },
+  {
+    id: "004",
+    image: assets.food04,
+    rating: 4.1,
+  },
+  {
+    id: "005",
+    image: assets.food05,
+    rating: 4.5,
+  },
+  {
+    id: "006",
+    image: assets.food06,
+    rating: 4.7,
+  },
+  {
+    id: "007",
+    image: assets.food07,
+    rating: 4.2,
+  },
+  {
+    id: "008",
+    image: assets.food08,
+    rating: 4.4,
+  },
+  {
+    id: "009",
+    image: assets.food09,
+    rating: 4.6,
+  },
+  {
+    id: "010",
+    image: assets.food01,
+    rating: 4.5,
+  },
+  {
+    id: "011",
+    image: assets.food02,
+    rating: 4.2,
+  },
+  {
+    id: "012",
+    image: assets.food03,
+    rating: 4.6,
+  },
+  {
+    id: "013",
+    image: assets.food04,
+    rating: 4.1,
+  },
+  {
+    id: "014",
+    image: assets.food05,
+    rating: 4.5,
+  },
+  {
+    id: "015",
+    image: assets.food06,
+    rating: 4.7,
+  },
+  {
+    id: "016",
+    image: assets.food07,
+    rating: 4.2,
+  },
+  {
+    id: "017",
+    image: assets.food08,
+    rating: 4.4,
+  },
+  {
+    id: "018",
+    image: assets.food09,
+    rating: 4.6,
+  },
+]
+
+export { dishData, dishes };

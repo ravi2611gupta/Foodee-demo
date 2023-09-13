@@ -15,14 +15,14 @@ const HomeHeader = () => {
       }}>
         <View>
           <Text style={{ fontFamily: FONTS.regular, fontSize: SIZES.large }}>Explore</Text>
-          <Text style={{ fontFamily: FONTS.bold, fontSize: SIZES.extraLarge }}>
+          <Text style={{ fontFamily: FONTS.semiBold, fontSize: SIZES.extraLarge }}>
             foodee
           </Text>
           <Text style={{ fontFamily: FONTS.regular, fontSize: SIZES.small, color: COLORS.primary }}>
-            <Icon name="location" size={15} color={COLORS.primary} /> SOho, London
+            <Icon name="location" size={15} color={COLORS.primary} /> Soho, London
           </Text>
         </View>
-        <View style={{ width: 45, height: 45 }}>
+        <View style={{ width: 45, height: 45, alignItems: 'flex-end' }}>
           <Icon name="bell" size={35} color={COLORS.secondary} />
           <View
             style={{
@@ -32,7 +32,7 @@ const HomeHeader = () => {
               backgroundColor: COLORS.primary,
               position: 'absolute',
               top: 1,
-              right: 18
+              right: 4
             }}
           />
         </View>

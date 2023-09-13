@@ -2,6 +2,7 @@ import { View, Text, Image, Dimensions } from 'react-native'
 import React from 'react'
 import { COLORS, SIZES, FONTS, } from '../constants'
 import Icon from 'react-native-vector-icons/FontAwesome';
+import Star from './shared/Star';
 
 const FeedCard = ({ data }) => {
     const { width } = Dimensions.get('window');
@@ -69,7 +70,7 @@ const FeedCard = ({ data }) => {
                         position: 'absolute',
                         bottom: 10,
                         left: 10,
-                        alignItems: 'center'
+                        alignItems: 'center',
                     }}
                 >
                     <Image
@@ -79,6 +80,8 @@ const FeedCard = ({ data }) => {
                             width: 60,
                             height: 60,
                             borderRadius: 30,
+                            borderWidth: 2.5,
+                            borderColor: COLORS.white,
                         }}
                     />
                     <View>
@@ -95,22 +98,34 @@ const FeedCard = ({ data }) => {
                 }}
             >
                 <Text style={{ fontFamily: FONTS.semiBold, fontSize: SIZES.large }}>{data.dishName}</Text>
-                <Icon name="bookmark-o" size={35} color={COLORS.primary} />
+                <Icon name="bookmark-o" size={30} color={COLORS.primary} />
             </View>
             {/* price */}
-            <Text style={{ fontFamily: FONTS.semiBold, fontSize: SIZES.large }}>{data.dishPrise}</Text>
+            <Text style={{ fontFamily: FONTS.InterSemiBold, fontSize: SIZES.large }}>{data.dishPrise}</Text>
             {/* rating */}
             <View
                 style={{
                     flexDirection: 'row',
                     gap: 5,
+                    alignItems: 'center',
+                    marginTop: 5,
                 }}
             >
-                <Text style={{ fontFamily: FONTS.semiBold, fontSize: SIZES.medium }}>{data.dishRating}</Text>
+                <View style={{
+                    flexDirection: 'row',
+                    gap: 2,
+                }}>
+                    <Star />
+                    <Star />
+                    <Star />
+                    <Star />
+                    <Star on={false} />
+                </View>
+                <Text style={{ fontFamily: FONTS.InterSemiBold, fontSize: SIZES.medium }}>{data.dishRating}</Text>
                 <Text style={{ fontSize: SIZES.medium, color: COLORS.secondary }}>({data.reviewCount} Reviews)</Text>
             </View>
             {/* description */}
-            <Text style={{ fontFamily: FONTS.regular, fontSize: SIZES.medium, color: COLORS.secondary }}>{data.dishDescription}</Text>
+            <Text style={{ fontFamily: FONTS.regular, fontSize: SIZES.medium, color: COLORS.secondary, marginTop: 5, }}>{data.dishDescription}</Text>
             {/* tags */}
             <View
                 style={{
@@ -120,6 +135,7 @@ const FeedCard = ({ data }) => {
                 }}
             >
                 {data.tags.map((tag) => <View
+                    key={tag}
                     style={{
                         paddingHorizontal: 15,
                         paddingVertical: 10,

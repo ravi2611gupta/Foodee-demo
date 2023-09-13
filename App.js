@@ -1,8 +1,7 @@
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
 import { useFonts } from "expo-font";
-import Home from "./screens/Home";
-import Profile from "./screens/Profile";
+import MainNavigator from "./navigators/MainNavigator";
 
 const Stack = createStackNavigator();
 
@@ -15,7 +14,12 @@ const theme = {
 
 export default function App() {
   const [loaded] = useFonts({
-    InterBold: require("./assets/fonts/Inter-Bold.ttf"),
+    RalewayBold: require("./assets/fonts/Raleway-Bold.ttf"),
+    RalewaySemiBold: require("./assets/fonts/Raleway-SemiBold.ttf"),
+    RalewayMedium: require("./assets/fonts/Raleway-Medium.ttf"),
+    RalewayRegular: require("./assets/fonts/Raleway-Regular.ttf"),
+    RalewayLight: require("./assets/fonts/Raleway-Light.ttf"),
+    InterBold: require("./assets/fonts/Inter-Regular.ttf"),
     InterSemiBold: require("./assets/fonts/Inter-SemiBold.ttf"),
     InterMedium: require("./assets/fonts/Inter-Medium.ttf"),
     InterRegular: require("./assets/fonts/Inter-Regular.ttf"),
@@ -26,10 +30,7 @@ export default function App() {
 
   return (
     <NavigationContainer theme={theme}>
-      <Stack.Navigator screenOptions={{headerShown: false}} initialRouteName="Home">
-        <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="Profile" component={Profile} />
-      </Stack.Navigator>
+      <MainNavigator />
     </NavigationContainer>
   );
 }
